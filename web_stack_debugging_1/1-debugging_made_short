@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 #This script starts the nginx service, waits for a second to make sure it's up and running, then uses curl to check if the nginx server is accessible on port 80.
-sed -i "s/8080/80/g" /etc/nginx/sites-enabled/default
-service nginx restart
-kill -9 "$(cat /run/nginx.pid)"
+service nginx start  # start Nginx service
+sleep 5             # wait for 5 seconds
+curl 0:80           # make a request to the server
