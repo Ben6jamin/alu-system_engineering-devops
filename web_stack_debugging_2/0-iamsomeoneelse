@@ -2,7 +2,7 @@
 #The script checks that it has been passed exactly one argument.
 
 if [ $# -ne 1 ]; then
-  echo "Usage: $0 Ben"
+  echo "Usage: $0 <username>"
   exit 1
 fi
 
