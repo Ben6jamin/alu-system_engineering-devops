@@ -2,4 +2,4 @@
 # Configures an Nginx server to listen on port 80.
 sed -i 's/80/8080/g' /etc/nginx/nginx.conf
 service nginx start
-kill "$(pgrep 'nginx' | head -1)"
+service nginx stop
